@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="dochead">
+	<link th:href="@{/css/normalize.css}" rel="stylesheet" />
+	<link th:href="@{/css/styles.css}" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet" />
+	<title>COLLAB</title>
+</head>
+
+<body>
+
+<div class="banner" th:fragment="banner">
+	<h2 class="bannertitle"><a class= "titletext" href="/" >RiffTracks</a></h2>
+	<h4 class="bannerdescription">Collaboration Station</h4>
+</div>
+<nav th:fragment="navigation">
+    <ul>
+    	<li><a class="logo" href="/">RT</a></li>
+        <li class="log"><a href="/login">login</a></li>
+        <li class="log"><a href="/signup">sign up</a></li>
+    </ul>
+    
+</nav>
+
+<nav th:fragment="navigation2">
+    <ul>
+    	<li><a class = "logo" href="/home">RT</a></li>
+        <li class="log"><a href="/logout">logout</a></li>
+        <li class="log"><a href="/home/newsong">new song</a></li>
+    </ul>
+ </nav>   
+
+<div th:fragment="listing(songschild)">
+	<ul>
+		<li class = "songplacement" th:each= "song:${songschild}">
+		<span th:text="${song.title}"></span>
+		<div th:include="template::listing"></div>
+		</li>		
+	</ul>
+
+</div>
+</body>
+</html>

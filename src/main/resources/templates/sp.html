@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="template :: dochead">
+</head>
+<body>	
+
+	<div th:replace="template :: banner"></div>
+	<div th:replace="template :: navigation2"></div>
+	
+	<div class ="parentplacement">
+ 		<h2 class = "songtitle" th:text="${parent.title}"></h2>
+		<p class="songdescription" th:text="${parent.notes}"></p>
+		<audio controls="controls" class="audiocontrol">
+		<source th:src="${parent.previewurl}" type="audio/mp3"></source>
+		</audio>
+		<a th:href="${parent.dlurl}"><img class = "download" src="https://www.lua.org/images/downloadarrow.png"></img></a>
+		<a th:href="'/home/' + ${parent.songnum} + '/' + ${parent.version} + '/' + ${parent.childid} + '/newversion'"><img class = "addnewversion" src="http://www.clipartbest.com/cliparts/bTy/Mqx/bTyMqxapc.png"></img></a> 
+	</div>
+	<div th:fragment="songDisplay" th:remove="tag">
+		<div class = "songplacement" th:each="song : ${child}">
+			<h2 class = "songtitle" th:text="${song.title}"></h2>
+			<p class="songdescription" th:text="${song.notes}"></p>
+			<audio controls="controls" class="audiocontrol">
+			<source th:src="${song.previewurl}" type="audio/mp3"></source>
+			</audio>
+			<a th:href="${song.dlurl}"><img class = "download" src="https://www.lua.org/images/downloadarrow.png"></img></a>
+			<a th:href="'/home/' + ${song.songuid} + '/' + ${song.version} + '/' + ${song.childid} + '/newversion'"><img class = "addnewversion" src="http://www.clipartbest.com/cliparts/bTy/Mqx/bTyMqxapc.png"></img></a> 
+		
+		</div>	
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="template :: dochead">
+</head>
+<body>	
+	<div th:replace="template :: banner"></div>
+	<div th:replace="template :: navigation2"></div>
+
+	<h1 class="label" th:text="'Welcome, ' + ${username} + ', check out these recently added tracks:'">Recently added tracks:</h1>
+	
+	<div class="songplacement" th:each ="song : ${songs}">
+	
+		<h2 class = "songtitle"><a class="linky" th:href = "'/home/' + ${song.uid}"   th:text="${song.title}"></a></h2>
+		<p class="songdescription" th:text="${song.notes}"></p>
+		<audio controls="controls" class="audiocontrol">
+		<source th:src="${song.previewurl}" type="audio/mp3"></source>
+		</audio>
+		<a th:href="${song.dlurl}"><img class = "download" src="https://www.lua.org/images/downloadarrow.png"></img></a>
+		<a th:href="'/home/' + ${song.songnum} + '/' + ${song.version} + '/' + ${song.childid} + '/newversion'"><img class = "addnewversion" src="http://www.clipartbest.com/cliparts/bTy/Mqx/bTyMqxapc.png"></img></a> 
+	</div>	
+	
+	
+</body>
+</html>

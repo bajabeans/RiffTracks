@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="template :: dochead">
+</head>
+<body>	
+	<div th:replace="template :: banner"></div>
+	<div th:replace="template :: navigation2"></div>
+
+	 
+	 <h2 class="signuptext">Create a New Song!</h2>
+	 <div class = "wrap">
+		 <form class = "form" method="post" enctype="multipart/form-data">
+		 	<input name="title" type="text" class="SU" placeholder="Title" th:value="${value}"></input>
+	 		<textarea name="notes" id="listform" th:text="${notes}"></textarea>
+	 		<input name="genre" type="text" class="SU" placeholder="Genre"></input>
+	 		
+	 		<!--  
+	 		<input name="dlurl" type="text" class="SU" placeholder = "Download URL"></input> 
+	 		<input name="previewurl" type="text" class="SU" placeholder = "MP3 URL"></input> 
+	 		-->
+	 		
+	 		<label class="mp3upload">
+	 		<input name="file" type="file"></input>
+	 		<span>Upload MP3 File</span>
+	 		</label>
+	 		<label class="mp3upload">
+	 		<input name="file" type="file"></input>
+	 		<span>Upload DL File</span>
+	 		</label>
+	 		<input name="guitar" type="checkbox" class="gicon" id="guitaricon" value="guitar"></input>
+	 		<label for="guitaricon" class="giconlabel"></label>
+	 		<input name="piano" type="checkbox" class="picon" id="pianoicon" value="piano"></input>
+	 		<label for="pianoicon" class="piconlabel"></label>
+	 		<input name="drums" type="checkbox" class="dicon" id="drumsicon" value="drums"></input>
+	 		<label for="drumsicon" class="diconlabel"></label>
+	 		<input name="bass" type="checkbox" class="bicon" id="bassicon" value="bass"></input>
+	 		<label for="bassicon" class="biconlabel"></label>
+	 		<input name="vocals" type="checkbox" class="vicon" id="vocalsicon" value="vocals"></input>
+	 		<label for="vocalsicon" class="viconlabel"></label>
+	 		<input name="instruments" type="checkbox" class="iicon" id="instrumenticon" value="instrument"></input>
+	 		<label for="instrumenticon" class="iiconlabel"></label>
+	 		<div class="error" th:text="${song_error}"></div>
+	 		<input type="submit" class="submit" value = "Submit"></input>
+		 </form>
+	</div>
+	 
+</body>
+</html>

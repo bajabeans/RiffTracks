@@ -1,0 +1,442 @@
+html{
+    background-color: #c4ccc3;
+}
+
+
+/*navigation bar*/
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li{
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #111;
+}
+
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+nav{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Home page + Animation*/
+
+.homepage{
+	border-top: 1px solid;
+	background-image: url("http://hddesktopwallpapers.in/wp-content/uploads/2015/07/music-wallpaper-Headphones.jpg");
+	background-repeat: no-repeat;
+	padding: 15px 0px 680px 8px;
+}
+
+.animated{
+	-webkit-animation-duration: 10s;
+	animation-duration: 3s;
+	-webkid-animation-fill-mode: both;
+	animation-fill-mode: both;
+	position: relative;
+	font: 70px Amatic SC;
+	color: #ffe4b0;
+	text-shadow: 2px 2px black;
+	margin-top: 40px;
+}
+
+@-webkit-keyframes fadeIn{
+	0% {opacity: 0;}
+	100% {opacity: 1; left: 70px;}
+}
+
+@keyframes fadeIn{
+	0% {opacity: 0; left: 70px;}
+	100% {opacity: 1; left: 240px;}
+}
+
+@keyframes fadeInDos{
+	0% {opacity: 0; left: 180px;}
+	100% {opacity: 1; left: 280px;}
+}
+
+@keyframes fadeInTres{
+	0% {opacity: 0; left: 230px;}
+	100% {opacity: 1; left: 320px;}
+}
+.fadeIn{
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	float: left;
+}
+
+.fadeInDos{
+	animation-name: fadeInDos;
+	animation-delay: 2s;
+	float: left;
+}
+
+.fadeInTres{
+	animation-name: fadeInTres;
+	animation-delay: 4s;
+	float: left;
+}
+.log{
+	float:right;
+}
+
+/* Search Bar */
+
+#search{
+	width: 230px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('http://www.w3schools.com/howto/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+#search:focus{
+	width: 50%;
+}
+
+nav #user-account {
+    float: right;
+}
+
+
+
+/*signup form */
+
+.wrap{
+    width: 420px;
+    margin: auto;
+}
+
+.SU{
+    width: 98%;
+    padding: 15px 0px 15px 8px;
+    border-radius: 5px;
+    box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 1);
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: #000 0px 1px 5px;
+}
+
+
+.submit{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-image: linear-gradient(#aeffa8 0%, #657165 100%);
+    font: 15px Oswald;
+    color: #FFF;
+    text-transform: uppercase;
+    text-shadow: #000 0px 1px 5px;
+    border: 1px solid #000;
+    opacity: 0.7;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
+}
+
+.submit:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.signuptext{
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    font: 25px Oswald;
+    color: #FFF;
+    text-transform: uppercase;
+    text-shadow: #000 0px 1px 5px;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+#listform{
+	height:200px;
+	width:410px;
+	width: 98%;
+    padding: 15px 0px 15px 8px;
+    border-radius: 5px;
+    box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 1);
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: #000 0px 1px 5px;
+}
+
+.listimage{
+	float: left;
+	height: 170px;
+	width: 170px;
+	top: -30px;
+	padding: 15px 20px 15px 8px;
+	
+}
+
+.post-author{
+	padding: 0px 0px 100px 0px;
+}
+
+/* Icons */
+
+input[type=checkbox]{
+	display:none;
+}
+
+.gicon + .giconlabel{
+	background-image: url("http://imgur.com/dHn3qgP.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding:0 0 5px 0px;
+}
+
+.gicon:checked + .giconlabel{
+	background-image: url("http://imgur.com/2oNqOCF.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	padding:0 0 5px 0px;
+}
+
+.picon + .piconlabel{
+	background-image: url("http://imgur.com/cGE0yAb.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding:0 0 5px 0px;
+}
+
+.picon:checked + .piconlabel{
+	background-image: url("http://imgur.com/wmR5Knl.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	padding:0 0 5px 0px;
+}
+
+.dicon + .diconlabel{
+	background-image: url("http://imgur.com/LxYLHLi.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding:0 0 5px 0px;
+}
+
+.dicon:checked + .diconlabel{
+	background-image: url("http://imgur.com/OSm3rz7.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	padding:0 0 5px 0px;
+}
+
+.bicon + .biconlabel{
+	background-image: url("http://imgur.com/wdwN7B3.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding:0 0 5px 0px;
+}
+
+.bicon:checked + .biconlabel{
+	background-image: url("http://imgur.com/p0fOk5M.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	padding:0 0 5px 0px;
+}
+
+.vicon + .viconlabel{
+	background-image: url("http://imgur.com/yG8kl6V.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding:0 0 5px 0px;
+}
+
+.vicon:checked + .viconlabel{
+	background-image: url("http://imgur.com/Ec5OZjC.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	padding:0 0 5px 0px;
+}
+
+.iicon + .iiconlabel{
+	background-image: url("http://imgur.com/S0KpZIp.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display:inline-block;
+	padding:0 0 5px 0px;
+}
+
+.iicon:checked + .iiconlabel{
+	background-image: url("http://imgur.com/33uSti7.png");
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	padding:0 0 5px 0px;
+}
+/* Song Placements */
+
+.songdescription{
+	position: relative;
+	top: 10px;
+	left: 20px;
+	margin-top: 10px;
+}
+
+.songplacement{
+	margin: auto;
+	width: 50%;
+	border-left: 10px solid #096680;
+}
+
+.childplacement{
+	margin: auto;
+	width: 40%;
+	border-left: 10 px solid #096680;
+}
+
+.audiocontrol{
+	position: relative;
+	left: 375px;
+	bottom: 55px;
+}
+
+.download{
+	width: 40px;
+	height: 40px;
+	position: relative;
+	left: 280px;
+}
+
+.addnewversion{
+	width: 32px;
+	height: 32px;
+	position: relative;
+	left: 289px;
+	bottom: 4px;
+}
+
+.childplacement{
+	margin: auto;
+	width: 85%;
+}
+
+.parentplacement{
+	margin: auto;
+	width: 60%;
+	border-left: 10px solid #083E4E;
+}
+
+.songtitle{
+	position: relative;
+	left: 10px;
+	font: 25px Baloo Tamma;
+	margin-bottom: 5px;
+}
+
+.demoplacement{
+	margin: auto;
+	width: 40%;
+	border-left: 10px solid #1EB1DB;
+}
+
+.bannertitle{
+	margin: auto;
+	position: relative;
+	left: 40px;
+	color: #ffebcd;
+	font: 45px Monoton;
+	
+}
+
+.bannerdescription{
+	margin: auto;
+	width: 50%;
+	position: relative;
+	bottom: 8px;
+	font: 22px Poiret One; 
+	color: #c4ccc3;
+}
+
+.banner{
+	background-color: #525252;
+}
+
+.linky{
+	text-decoration: none;
+	color: black;
+}
+
+a:vistied{
+	color: black;
+}
+.label{
+	margin: auto;
+	width: 77%;
+	position: relative;
+	font: 30px Poiret One;
+	margin-top: 20px;
+	letter-spacing: 1px;
+}
+
+.logo{
+	
+	color: #ffebcd;
+	font: 20px Monoton;
+	letter-spacing: 3px;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	height: 36px;
+	
+}
+.titletext{
+	text-decoration: none;
+	color: #ffebcd;
+}
+
+.titletext:vistited{
+	color: #ffebcd;
+}
